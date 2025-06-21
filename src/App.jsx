@@ -88,8 +88,11 @@ function App() {
           {/* Description */}
           <div className="max-w-md mx-auto mb-8">
             <p className="text-lg text-mint-700 leading-relaxed">
-              Welcome to my little corner of the internet! I'm all about spreading joy, 
-              freshness, and positive vibes. Let's make the world a little more colorful together! 
+            Con gái bé bỏng của bố mẹ!
+
+Mint là món quà tuyệt vời nhất mà cuộc đời ban tặng.
+
+Mong con luôn vui vẻ, hạnh phúc và mạnh mẽ như chòm sao của mình! 
               <span className="inline-block animate-bounce ml-1">🌿</span>
             </p>
           </div>
