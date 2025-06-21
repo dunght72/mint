@@ -241,3 +241,118 @@
   animation-delay: 0.5s;
 }
 
+@keyframes star-blink {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+.animate-star-blink {
+  animation: star-blink 2s infinite;
+}
+
+@keyframes night-leaf {
+  0% { transform: translateY(0) rotate(-10deg);}
+  50% { transform: translateY(-20px) rotate(10deg);}
+  100% { transform: translateY(0) rotate(-10deg);}
+}
+.animate-night-leaf {
+  animation: night-leaf 5s ease-in-out infinite;
+}
+button, a, input, textarea {
+  cursor: url('./assets/mint-cursor.png') 16 16, auto !important;
+}
+@keyframes mint-bounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  10% { transform: scale(1.05) rotate(-5deg);}
+  25% { transform: translateY(-14px) scale(1.08) rotate(4deg);}
+  40% { transform: scale(1.02);}
+  60% { transform: scale(0.98);}
+  75% { transform: translateY(-6px);}
+  90% { transform: scale(1.01);}
+}
+.animate-mint-bounce {
+  animation: mint-bounce 2.2s cubic-bezier(.28,1.25,.46,.99) infinite;
+}
+.mascot-mint img {
+  user-select: none;
+  pointer-events: none;
+}
+@keyframes mascot-circle-fly {
+  0% { transform: translate(0, 80px) scale(0.1) rotate(-30deg); opacity: 0; }
+  10% { opacity: 1;}
+  40% { transform: translate(-300px, -140px) scale(1.1) rotate(40deg);}
+  80% { transform: translate(-40px, 0px) scale(1.05) rotate(-15deg);}
+  100% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 1;}
+}
+.animate-mascot-circle-fly {
+  animation: mascot-circle-fly 2.1s cubic-bezier(.65,1.5,.42,.98) both;
+}
+@keyframes mascot-wave {
+  0% { transform: rotate(0deg);}
+  10% { transform: rotate(-10deg);}
+  20% { transform: rotate(14deg);}
+  30% { transform: rotate(-8deg);}
+  40% { transform: rotate(12deg);}
+  50% { transform: rotate(0deg);}
+  100% { transform: rotate(0deg);}
+}
+.animate-mascot-wave {
+  animation: mascot-wave 1.1s cubic-bezier(.66,1.3,.48,.9);
+}
+@keyframes mascot-hand-wave {
+  0% { transform: rotate(0deg);}
+  15% { transform: rotate(-22deg);}
+  30% { transform: rotate(25deg);}
+  45% { transform: rotate(-18deg);}
+  60% { transform: rotate(18deg);}
+  80% { transform: rotate(0deg);}
+  100% { transform: rotate(0deg);}
+}
+@keyframes mascot-heart-fly {
+  0% { opacity: 0; transform: translateY(0) scale(1);}
+  20% { opacity: 1;}
+  50% { transform: translateY(-30px) scale(1.2);}
+  90% { opacity: 1;}
+  100% { opacity: 0; transform: translateY(-70px) scale(1);}
+}
+@keyframes mascot-circle-orbit {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(0);
+    opacity: 0;
+  }
+  10% { opacity: 1;}
+  70% {
+    transform: translate(-50%, -50%) rotate(340deg) translateX(180px) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+.mascot-flying {
+  animation: mascot-circle-orbit 2.2s cubic-bezier(.65,1.5,.42,.98) forwards;
+  z-index: 60;
+  /* đảm bảo không che profile, có thể tăng z-index nếu bị che */
+}
+@keyframes mascot-heart-global-fly {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(1);
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(-40px) scale(1.3);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(-70vh) scale(1.7) rotate(-10deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-90vh) scale(1.2) rotate(12deg);
+  }
+}
+.mascot-heart-fly {
+  animation: mascot-heart-global-fly 1.3s cubic-bezier(.66,1.15,.41,.96);
+  will-change: transform, opacity;
+}
